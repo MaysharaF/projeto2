@@ -48,6 +48,11 @@ export const LabelForm = styled.a`
   opacity: 0.8;
   transition: opacity 0.2s ease 0s;
   align-self: flex-start;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(160, 120, 255);
+  }
 `;
 
 export const ButtonLogin = styled.button`
@@ -68,6 +73,82 @@ export const SignupContent = styled.div`
   color: rgb(204, 204, 204);
   text-align: center;
 `;
+
+export const Divider = styled.div`
+    position: relative;
+    font-size: 12px;
+    color: rgb(135, 134, 139);
+    margin: 24px 0px;
+    text-align: center;
+
+    &::before {
+      left: 0px;
+    }
+    &::after{
+      right: 0px;
+    }
+
+    
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: calc(50% - 25px);
+      height: 1px;
+      background: rgb(40, 39, 47);
+    }
+`;
+
+export const Footer = styled.div`
+  display: flex;
+`;
+
+export const InfoFooter = styled.div`
+  color: rgb(225, 225, 230);
+  font-size: 14px;
+  white-space: nowrap;
+  margin-right: 24px;
+  align-self: center;
+`;
+
+export const ButtonGit = styled.a`
+  width: 100%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background: rgb(41, 41, 46);
+  border-radius: 5px;
+  border: 0px;
+  color: rgb(255, 255, 255);
+  height: 50px;
+  transition: background 0.2s ease 0s;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+
+  :hover {
+    background: rgb(124, 98, 212);
+
+    svg {
+      color: white;
+    }
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    color: rgb(124, 98, 212);
+    transition: all 0.2s ease 0s;
+  }
+`;
+
+
 
 
 
