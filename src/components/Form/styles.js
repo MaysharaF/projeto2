@@ -24,6 +24,10 @@ export const Input = styled(InputAnt)`
   padding: 0px 1em 0px 2.65em;
   border-radius: 5px;
   border: none;
+
+  :focus {
+    border: 2px solid rgb(130, 87, 230);
+  }
 `;
 
 const IconsCSS = css`
@@ -65,6 +69,11 @@ export const ButtonLogin = styled.button`
   transition: background 0.2s ease 0s, color 0.2s ease 0s;
   font-size: 16px;
   text-transform: uppercase;
+
+  :disabled{
+    background: rgb(65, 53, 107);
+    color: rgba(255, 255, 255, 0.35);
+  }
 `;
 
 export const SignupContent = styled.div`

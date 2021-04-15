@@ -24,7 +24,7 @@ function Form() {
 
         <LabelForm>Esqueci minha senha</LabelForm>
 
-        <ButtonLogin type="submit">Entrar</ButtonLogin>
+        <ButtonLogin type="submit" disabled>Entrar</ButtonLogin>
         <SignupContent>
           Não tem uma conta? <LabelForm>Registre-se</LabelForm>
         </SignupContent>
