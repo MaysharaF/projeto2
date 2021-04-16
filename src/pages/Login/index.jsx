@@ -1,5 +1,6 @@
 import React from 'react';
-import Form from '../../components/Form'
+import FormLogin from '../../components/FormLogin'
+
 import { 
   Container,
   Content, 
@@ -21,7 +22,7 @@ function Login() {
           </InfoContainer>
 
           <FormContainer>
-            <Form/>
+            <FormLogin/>
           </FormContainer>
 
         </LoginContainer>

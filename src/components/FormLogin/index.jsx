@@ -1,10 +1,9 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { 
   Container,
   InputContainer,
   Input,
-  EmailIcon,
-  PasswordIcon,
   LabelForm,
   ButtonLogin,
   SignupContent,
@@ -15,7 +14,7 @@ import {
 
 } from './styles';
 
-function Form() {
+function FormLogin({history}) {
   return (
     <Container>
       <InputContainer>
@@ -26,7 +25,7 @@ function Form() {
 
         <ButtonLogin type="submit" disabled>Entrar</ButtonLogin>
         <SignupContent>
-          Não tem uma conta? <LabelForm>Registre-se</LabelForm>
+          Não tem uma conta? <Link to={'/signup'}><LabelForm >Registre-se</LabelForm></Link>
         </SignupContent>
 
         <Divider/>
@@ -42,4 +41,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default FormLogin;
