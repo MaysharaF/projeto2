@@ -4,6 +4,7 @@ import { isAuthenticated } from '../services/auth'
 
 import Login from '../pages/Login'
 import Signup from '../pages/Signup'
+import Home from '../pages/Home'
 
 const PrivateRoute = (props) => {
   const { component: Component, ...rest } = props;
@@ -45,6 +46,7 @@ function routes() {
     <Switch>
       <Route path="/" exact component={Login}/>
       <Route path="/signup" exact component={Signup}/>
+      <PrivateRoute path="/home" exact component={Home}/>
     </Switch>
   );
 }
