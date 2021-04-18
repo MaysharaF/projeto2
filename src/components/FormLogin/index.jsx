@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { withRouter } from 'react-router-dom'
 import { Link } from "react-router-dom";
 
 import api from '../../services/api'
@@ -42,15 +43,16 @@ function FormLogin({history}) {
     }
   }
 
+
   return (
-    <Container>
+    <Container form={form}>
       <InputContainer>
-        <Item rules={[{required: true,message: "Email é obrigatório", min: 8}]} name="name">
-          <Input  placeholder="E-mail"/>
+        <Item rules={[{required: true,message: "Email é obrigatório", min: 5}]} name="email">
+          <Input  placeholder="E-mail" name="email"/>
         </Item>
 
-        <Item rules={[{required: true,message: "Senha é obrigatório", min: 8}]} name="name">
-          <Input type="password" placeholder="Senha"/>
+        <Item rules={[{required: true,message: "Senha é obrigatório", min: 5}]} name="password">
+          <Input type="password" placeholder="Senha" name="password"/>
         </Item>
 
         <LabelForm>Esqueci minha senha</LabelForm>
@@ -58,7 +60,7 @@ function FormLogin({history}) {
         { loading ?
           <Spin/>
           :
-          <ButtonLogin type="submit" disabled  onClick={() => submitUser()}>Entrar</ButtonLogin>
+          <ButtonLogin type="submit" onClick={() => submitUser()}>Entrar</ButtonLogin>
         }
         <SignupContent>
           Não tem uma conta? <Link to={'/signup'}><LabelForm >Registre-se</LabelForm></Link>
@@ -77,4 +79,4 @@ function FormLogin({history}) {
   );
 }
 
-export default FormLogin;
+export default withRouter(FormLogin);

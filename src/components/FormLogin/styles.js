@@ -12,6 +12,12 @@ export const InputContainer = styled.section`
   display: grid;
   grid-auto-flow: row;
   gap: 10px;
+
+  .ant-form-item-explain-error {
+    display: inline-block;
+    color: rgb(211, 66, 66);
+    font-size: 14px;
+  }
 `;
 
 export const Input = styled(InputAnt)`
