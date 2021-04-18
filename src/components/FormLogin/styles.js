@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
-import { Input as InputAnt } from 'antd'
+import { Input as InputAnt, Form } from 'antd'
 
 import { Email, LockAlt } from '../../styles/Icons'
 
-export const Container = styled.form`
+export const Container = styled(Form)`
   width: 100%;
   height: 100%;
 `;
@@ -53,6 +53,7 @@ export const LabelForm = styled.a`
   transition: opacity 0.2s ease 0s;
   align-self: flex-start;
   cursor: pointer;
+  text-decoration: none;
 
   &:hover {
     color: rgb(160, 120, 255);

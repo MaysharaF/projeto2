@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Form } from 'antd'
 
-export const Container = styled.form`
+export const Container = styled(Form)`
   width: 100%;
   height: 100%;
 
@@ -10,6 +11,12 @@ export const Container = styled.form`
     margin-bottom: 39px;
     display: block;
     font-weight: bold;
+  }
+
+  .ant-form-item-explain-error {
+    display: inline-block;
+    color: rgb(211, 66, 66);
+    font-size: 14px;
   }
 `;
 
