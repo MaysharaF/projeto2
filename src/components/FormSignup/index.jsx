@@ -35,7 +35,7 @@ function FormSignup({history}) {
         password
       })
       login(token)
-      history.push('/home');
+      history.push('/');
     }catch{
       message.error('')
     }finally{

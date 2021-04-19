@@ -35,7 +35,7 @@ function FormLogin({history}) {
         password
       })
       login(token)
-      history.push('/home');
+      history.push('/');
     }catch{
       message.error('Falha ao realizar cadastro')
     }finally{
