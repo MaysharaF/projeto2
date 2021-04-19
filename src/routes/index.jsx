@@ -31,7 +31,7 @@ const PrivateRoute = (props) => {
         ) : (
           <Redirect
             to={{
-              pathname: "/",
+              pathname: "/login",
               state: { from: routeProps.location },
             }}
           />
@@ -44,7 +44,7 @@ const PrivateRoute = (props) => {
 function routes() {
   return (
     <Switch>
-      <Route path="/" exact component={Login}/>
+      <Route path="/login" exact component={Login}/>
       <Route path="/signup" exact component={Signup}/>
       <PrivateRoute path="/home" exact component={Home}/>
     </Switch>
