@@ -37,9 +37,10 @@ function FormSignup({history}) {
       })
       login(token)
        history.push('/home');
-    }catch{
-      message.error('')
-    }finally{
+    }catch {
+      message.warning("Preencha os campos corretamente")
+    }
+    finally{
       setLoading(false)
     }
   }
