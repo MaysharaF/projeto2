@@ -1,4 +1,4 @@
-const TOKEN_KEY = '@projetoWeb2/acess_token'
+const TOKEN_KEY = 'd41d8cd98f00b204e9800998ecf8427e'
 
 export const getToken = () => localStorage.getItem(TOKEN_KEY);
 

@@ -30,7 +30,7 @@ function FormLogin({history}) {
       await form.validateFields()
       setLoading(true)
       const {email, password} = form.getFieldsValue();
-      const { data: {token} } = await api.post('/login', {
+      const { data: {token} } = await api.post('/auth/authenticate', {
         email,
         password
       })

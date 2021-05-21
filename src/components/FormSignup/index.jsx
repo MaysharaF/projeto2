@@ -25,17 +25,18 @@ function FormSignup({history}) {
     try {
       await form.validateFields()
       setLoading(true)
-      const {email, password} = form.getFieldsValue()
-      await api.post('/register', {
+      const {email, password, name} = form.getFieldsValue()
+      await api.post('/auth/register', {
+        name,
         email,
-        password
+        password,
       })
       const { data: {token} } = await api.post('/login', {
         email,
         password
       })
       login(token)
-      history.push('/');
+      // history.push('/');
     }catch{
       message.error('')
     }finally{
