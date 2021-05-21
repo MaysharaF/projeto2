@@ -31,12 +31,12 @@ function FormSignup({history}) {
         email,
         password,
       })
-      const { data: {token} } = await api.post('/login', {
+      const { data: {token} } = await api.post('/auth/authenticate', {
         email,
         password
       })
       login(token)
-      // history.push('/');
+       history.push('/home');
     }catch{
       message.error('')
     }finally{

@@ -44,9 +44,9 @@ const PrivateRoute = (props) => {
 function routes() {
   return (
     <Switch>
-      <PrivateRoute path="/" exact component={Home}/>
+      <PrivateRoute path="/home" exact component={Home}/>
       <Route path="/signup" exact component={Signup}/>
-      <Route path="/login" component={Login}/>
+      <Route path="/" component={Login}/>
     </Switch>
   );
 }
