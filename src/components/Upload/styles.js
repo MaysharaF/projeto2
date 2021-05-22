@@ -29,6 +29,9 @@ export const Content = styled.div`
   border-radius: 4px;
   padding: 20px;
   color: black;
+  @media (max-width: 375px) { 
+    width: 100%;
+  }
 `;
 
 export const DropContainer = styled.div.attrs({

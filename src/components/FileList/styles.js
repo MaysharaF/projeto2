@@ -8,11 +8,17 @@ export const Content = styled.div`
   width: 40%;
   border-radius: 4px;
   padding: 15px;
+  @media (max-width: 375px) { 
+    width: 85%;
+  }
 `;
 
 export const Container = styled.ul`
   margin-top: 20px;
   width: 50%;
+  @media (max-width: 375px) { 
+    width: 100%;
+  }
   
   li {
     display: flex;
