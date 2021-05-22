@@ -4,8 +4,9 @@ import React, { Component } from "react";
   Header,
   HeaderContent, 
   LogoContent, 
-  Content, 
-  ButtonSignup } from './styles';
+  Content,
+  ButtonSignup
+ } from './styles';
   import {uniqueId} from 'lodash'
   import filesize from 'filesize'
 
@@ -69,7 +70,7 @@ import React, { Component } from "react";
 
     data.append("file", uploadedFile.file, uploadedFile.name);
 
-    api.post("posts", data, {
+    api.post("/posts", data, {
         onUploadProgress: e => {
           const progress = parseInt(Math.round((e.loaded * 100) / e.total));
 
@@ -93,7 +94,7 @@ import React, { Component } from "react";
   };
 
   handleDelete = async id => {
-    await api.delete(`posts/${id}`);
+    await api.delete(`/posts/${id}`);
 
     this.setState({
       uploadedFiles: this.state.uploadedFiles.filter(file => file.id !== id)
@@ -119,7 +120,7 @@ import React, { Component } from "react";
         </HeaderContent>
           
           <Content>
-          {/* <ButtonSignup onClick={() => history.push('/')}>Logout</ButtonSignup> */}
+          <ButtonSignup href="/login">Logout</ButtonSignup>
 
           </Content>
       </Header>

@@ -56,7 +56,7 @@ export const Content = styled.div`
   z-index: 2;
 `
 
-export const ButtonSignup = styled.button`
+export const ButtonSignup = styled.a`
   background: rgb(130, 87, 229);
   border-radius: 5px;
   border: 0px;
@@ -66,6 +66,7 @@ export const ButtonSignup = styled.button`
   font-size: 16px;
   cursor: pointer;
   padding: 11px;
+  text-decoration: none;
 
   &:hover {
     background: rgb(164, 142, 214);
