@@ -8,6 +8,21 @@ export const Container = styled.div`
   padding-top: 72px;
 `;
 
+export const ContentUpload = styled.div`
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  span {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 3px;
+  }
+`;
+
 export const Header = styled.div`
   position: fixed;
   display: flex;

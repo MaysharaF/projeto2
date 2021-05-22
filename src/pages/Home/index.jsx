@@ -5,7 +5,8 @@ import React, { Component } from "react";
   HeaderContent, 
   LogoContent, 
   Content,
-  ButtonSignup
+  ButtonSignup,
+  ContentUpload
  } from './styles';
   import {uniqueId} from 'lodash'
   import filesize from 'filesize'
@@ -124,11 +125,12 @@ import React, { Component } from "react";
 
           </Content>
       </Header>
-
-      <Upload onUpload={this.handleUpload}/>
-      {!!uploadedFiles.lenght && (
-         <FileList files={uploadedFiles}/>
-      )}
+      <ContentUpload>
+        <Upload onUpload={this.handleUpload}/>
+        <span>Lista de Arquivos Enviados</span>
+        <FileList files={uploadedFiles}/>
+      </ContentUpload>
+      
     </Container>
     );
   }
