@@ -127,8 +127,12 @@ import React, { Component } from "react";
       </Header>
       <ContentUpload>
         <Upload onUpload={this.handleUpload}/>
-        <span>Lista de Arquivos Enviados</span>
-        <FileList files={uploadedFiles}/>
+        {uploadedFiles.length > 0 && (
+         <>
+          <span>Lista de Arquivos Enviados</span>
+          <FileList files={uploadedFiles} onDelete={this.handleDelete}/>
+         </>
+        )}
       </ContentUpload>
       
     </Container>
