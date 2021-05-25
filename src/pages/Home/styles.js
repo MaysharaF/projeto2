@@ -9,6 +9,10 @@ export const Container = styled.div`
   color: rgb(255, 255, 255);
   background: rgb(18, 18, 20);
   padding-top: 72px;
+
+  hr {
+    color: #ccc;
+  }
 `;
 
 export const Header = styled.div`
@@ -82,7 +86,7 @@ export const ContentUpload = styled.div`
   flex-direction: column;
   height: 100%;
   width: 35%;
-  background: #fdfdfdd1;
+  background: #fff;
 
   span {
     font-size: 20px;
@@ -95,55 +99,12 @@ export const Mural = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 30%;
+  height: 60%;
   width: 100%;
   background: #fff;
 `;
 
-export const TextArea = styled.input`
-  justify-content: flex-start;
-  display: flex;
-  height: 30%;
-  width: 70%;
-  font-size: 14px;
-  padding: 5px;
-  margin-top: 10px;
-  border: 2px solid rgb(164, 142, 214);
-  border-radius: 8px;
-`;
-export const ContentButtonSave = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  height: 10%;
-  width: 70%;
-  margin-top: 10px;
-`;
 
-export const ButtonSave = styled.button`
-  background: rgb(130, 87, 229);
-  border-radius: 5px;
-  border: 0px;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  transition: background 0.2s ease 0s, color 0.2s ease 0s;
-  font-size: 14px;
-  cursor: pointer;
-  padding: 6px;
-  text-decoration: none;
-  width: 20%;
 
-  &:hover {
-    background: rgb(164, 142, 214);
-  }
-`
-
-export const FeedContent = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: 70%;
-  width: 100%;
-  background: red;
-`;
 
 

@@ -5,7 +5,7 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   background: #fff;
-  width: 40%;
+  width:100%;
   border-radius: 4px;
   padding: 15px;
   @media (max-width: 375px) { 
@@ -15,7 +15,7 @@ export const Content = styled.div`
 
 export const Container = styled.ul`
   margin-top: 20px;
-  width: 50%;
+  width: 100%;
   @media (max-width: 375px) { 
     width: 100%;
   }
