@@ -23,7 +23,7 @@ export const Content = styled.div`
   justify-content: center;
   align-items: center;  
   height: 50%;
-  width: 40%;
+  width: 100%;
   margin: 30px;
   background: #fff;
   border-radius: 4px;

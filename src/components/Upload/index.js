@@ -7,7 +7,7 @@ export default class Upload extends Component {
 
   renderDragMessage = (isDragActive, isDragReject) => {
     if (!isDragActive) {
-      return <UploadMessage>Arraste arquivos aqui</UploadMessage>;
+      return <UploadMessage>Arraste ou clique aqui para adicionar seus arquivos</UploadMessage>;
     }
 
     if (isDragReject) {
