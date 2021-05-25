@@ -24,8 +24,16 @@ import React, { Component } from "react";
 
  class Home extends Component {
   state = {
-    uploadedFiles: []
+    uploadedFiles: [],
   };
+
+  constructor() {
+    super();
+    this.state = {post: '', posts: []};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
   async componentDidMount() {
     const response = await api.get("posts");
@@ -112,6 +120,19 @@ import React, { Component } from "react";
     this.state.uploadedFiles.forEach(file => URL.revokeObjectURL(file.preview));
   }
 
+  handleChange(event) {
+    this.setState({post: event.target.value});
+  }
+
+  handleSubmit() {
+    this.setState({
+      post: '',
+      posts: [].concat(this.state.posts, this.state.post)});
+  }
+
+
+
+
   render() {
     const { uploadedFiles } = this.state;
 
@@ -136,14 +157,19 @@ import React, { Component } from "react";
           <TextArea 
             type="text" 
             placeholder="O que está acontecendo?" 
-            name="text"/>
+            name="text"
+            onChange={this.handleChange}
+            value={this.state.post}
+            />
           <ContentButtonSave>
-          <ButtonSave >Publicar</ButtonSave>
+          <ButtonSave onClick={this.handleSubmit}>Publicar</ButtonSave>
           </ContentButtonSave>
           <Upload onUpload={this.handleUpload}/>
         </Mural>
-        
-        {/* <Upload onUpload={this.handleUpload}/>
+        <FeedContent>
+          {this.state.posts.map(post => <li>{post}</li>)}
+        </FeedContent>
+        {/*
         {uploadedFiles.length > 0 && (
          <>
           <span>Lista de Arquivos Enviados</span>
