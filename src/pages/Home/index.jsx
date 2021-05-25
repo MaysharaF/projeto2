@@ -6,7 +6,13 @@ import React, { Component } from "react";
   LogoContent, 
   Content,
   ButtonSignup,
-  ContentUpload
+  ContentUpload,
+  Mural,
+  TextArea,
+  ContentButtonSave,
+  ButtonSave,
+  FeedContent,
+
  } from './styles';
   import {uniqueId} from 'lodash'
   import filesize from 'filesize'
@@ -126,13 +132,24 @@ import React, { Component } from "react";
           </Content>
       </Header>
       <ContentUpload>
-        <Upload onUpload={this.handleUpload}/>
+        <Mural>
+          <TextArea 
+            type="text" 
+            placeholder="O que está acontecendo?" 
+            name="text"/>
+          <ContentButtonSave>
+          <ButtonSave >Publicar</ButtonSave>
+          </ContentButtonSave>
+          <Upload onUpload={this.handleUpload}/>
+        </Mural>
+        
+        {/* <Upload onUpload={this.handleUpload}/>
         {uploadedFiles.length > 0 && (
          <>
           <span>Lista de Arquivos Enviados</span>
           <FileList files={uploadedFiles} onDelete={this.handleDelete}/>
          </>
-        )}
+        )} */}
       </ContentUpload>
       
     </Container>
